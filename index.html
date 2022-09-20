@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xSport</title>
+    <link rel="stylesheet" type="text/css" href="https://vernik03.ml/xSport/style/style.css">
+    <link rel="stylesheet" type="text/css" href="https://vernik03.ml/xSport/style/slider.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://vernik03.ml/xSport/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://vernik03.ml/xSport/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://vernik03.ml/xSport/fav/favicon-16x16.png">
+    <link rel="manifest" href="https://vernik03.ml/xSport/fav/site.webmanifest">
+    <link rel="mask-icon" href="https://vernik03.ml/xSport/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://vernik03.ml/xSport/js/slick.min.js"></script>
+    <script src="https://vernik03.ml/xSport/js/script.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+</head>
+<body>
+
+    <div class="popup-fade">
+        <form class="popup">
+            <div class="name_and_close"><h3>Зворотній зв’язок</h3><a class="popup-close" href="#"><svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="18.8254" cy="18.8255" r="18.4314" transform="rotate(-90 18.8254 18.8255)" fill="#726EFF"/>
+                <path d="M26.8548 23.8548L22.0008 19.0008L26.8548 14.1468C26.9478 14.0527 27 13.9257 27 13.7933C27 13.661 26.9478 13.534 26.8548 13.4398L24.5618 11.1468C24.5154 11.1003 24.4604 11.0634 24.3997 11.0382C24.339 11.013 24.274 11 24.2083 11C24.1426 11 24.0776 11.013 24.0169 11.0382C23.9563 11.0634 23.9012 11.1003 23.8548 11.1468L19.0008 16.0008L14.1468 11.1468C14.053 11.0531 13.9259 11.0004 13.7933 11.0004C13.6607 11.0004 13.5336 11.0531 13.4398 11.1468L11.1468 13.4398C11.1003 13.4862 11.0634 13.5413 11.0382 13.6019C11.013 13.6626 11 13.7276 11 13.7933C11 13.859 11.013 13.924 11.0382 13.9847C11.0634 14.0454 11.1003 14.1004 11.1468 14.1468L16.0008 19.0008L11.1468 23.8548C11.0531 23.9486 11.0004 24.0757 11.0004 24.2083C11.0004 24.3409 11.0531 24.468 11.1468 24.5618L13.4398 26.8548C13.4862 26.9013 13.5413 26.9383 13.6019 26.9635C13.6626 26.9886 13.7276 27.0016 13.7933 27.0016C13.859 27.0016 13.924 26.9886 13.9847 26.9635C14.0454 26.9383 14.1004 26.9013 14.1468 26.8548L19.0008 22.0008L23.8548 26.8548C23.9486 26.9485 24.0757 27.0012 24.2083 27.0012C24.3409 27.0012 24.468 26.9485 24.5618 26.8548L26.8548 24.5618C26.9013 24.5154 26.9383 24.4604 26.9635 24.3997C26.9886 24.339 27.0016 24.274 27.0016 24.2083C27.0016 24.1426 26.9886 24.0776 26.9635 24.0169C26.9383 23.9563 26.9013 23.9012 26.8548 23.8548V23.8548Z" fill="white"/>
+                </svg>
+                </a></div>
+            <input type="name" id="name"  placeholder="Ім'я" class="popup_input" autocomplete="on" required="required"></input>
+            <input type="tel"  id="tel" placeholder="Телефон" class="popup_input" autocomplete="on" required="required"></input>
+            <input type="email" id="email" placeholder="E-mail" class="popup_input" autocomplete="on" required="required"></input>
+            <textarea type="text" placeholder="Повідомлення" class="popup_input" required="required"></textarea>
+            <button class="send_feedback">
+                <p>Відправити</p>
+            </button>
+        </form>		
+    </div>
+    
+      <header class="mobile_header">
+        <div class="m_header_panel">
+            <div class="basket">
+                <img src="https://vernik03.ml/xSport/img/basket.svg" alt="">
+                <div>1</div>
+            </div>
+            <form action="" class="search_form">
+                <input type="text" placeholder="Пошук..." class="search">
+                    <button class="search_button"><img src="https://vernik03.ml/xSport/img/magnifier.svg" alt=""></button>
+                </input>
+            </form>
+        <div class="m_menu_button">
+            <rect class="r1"></rect>
+            <rect class="r2"></rect>
+            <rect class="r3"></rect>
+        </div>
+        </div>
+
+        <div class="menu_content">
+            <img src="https://vernik03.ml/xSport/img/logo.svg" alt="Logo" class="header_logo">
+            <a href="" class="log_in">вхід / реєстрація</a>
+            <div class="feedback">
+                <img src="https://vernik03.ml/xSport/img/feedback_letter.svg" alt="">
+                <p>зворотний зв'язок</p>
+            </div>
+            <nav class="mobile_nav">
+                <ul>
+                    <li class="menu_elem"><a href="">Головна</a></li>
+                    <li class="menu_line"><div></div></li>
+                    <li class="menu_elem"><a href="">Каталог</a></li>
+                    <li class="menu_line"><div></div></li>
+                    <li class="menu_elem"><a href="">Даставка та оплата</a></li>
+                    <li class="menu_line"><div></div></li>
+                    <li class="menu_elem"><a href="">Прайс-лист</a></li>
+                    <li class="menu_line"><div></div></li>
+                    <li class="menu_elem"><a href="">Контакти</a></li>                      
+                </ul>
+            </nav>
+        </div>
+        <div class="menu_content2">
+            <div class="mc2">
+                <img src="https://vernik03.ml/xSport/img/logo.svg" alt="Logo" class="header_logo">                
+                <div class="feedback">
+                    <img src="https://vernik03.ml/xSport/img/feedback_letter.svg" alt="">
+                    <p>зворотний зв'язок</p>
+                </div>
+                <a href="" class="log_in">вхід / реєстрація</a>
+            </div>
+            <nav class="mobile_nav">
+                <ul>
+                    <li class="menu_elem"><a href="">Головна</a></li>
+                    <li class="menu_line"><div></div></li>
+                    <li class="menu_elem"><a href="">Каталог</a></li>
+                    <li class="menu_line"><div></div></li>
+                    <li class="menu_elem"><a href="">Даставка та оплата</a></li>
+                    <li class="menu_line"><div></div></li>
+                    <li class="menu_elem"><a href="">Прайс-лист</a></li>
+                    <li class="menu_line"><div></div></li>
+                    <li class="menu_elem"><a href="">Контакти</a></li>                      
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="content">
+        <header class="desktop_header">
+            <img src="https://vernik03.ml/xSport/img/logo.svg" alt="Logo" class="header_logo">
+            <div class="feedback">
+                <img src="https://vernik03.ml/xSport/img/feedback_letter.svg" alt="">
+                <p>зворотний зв'язок</p>
+            </div>
+            <form action="" class="search_form">
+                <input type="text" placeholder="Пошук..." class="search">
+                    <button class="search_button"><img src="https://vernik03.ml/xSport/img/magnifier.svg" alt=""></button>
+                </input>
+            </form>
+            <a href="" class="log_in">вхід / реєстрація</a>
+            <div class="basket">
+                <img src="https://vernik03.ml/xSport/img/basket.svg" alt="">
+                <div>1</div>
+            </div>
+        </header>
+        <nav class="desktop_nav">
+            <ul>
+                <li class="menu_elem"><a href="">Головна</a></li>
+                <li class="menu_line"><div></div></li>
+                <li class="menu_elem"><a href="">Каталог</a></li>
+                <li class="menu_line"><div></div></li>
+                <li class="menu_elem"><a href="">Даставка та оплата</a></li>
+                <li class="menu_line"><div></div></li>
+                <li class="menu_elem"><a href="">Прайс-лист</a></li>
+                <li class="menu_line"><div></div></li>
+                <li class="menu_elem"><a href="">Контакти</a></li>                      
+            </ul>
+        </nav>
+
+        
+        <div class="slider_banner_space">
+            <div class="slider_item">
+                <img src="https://vernik03.ml/xSport/img/slider_1.jpg" alt="">
+            </div>
+            <div class="slider_item">
+                <img src="https://vernik03.ml/xSport/img/slider_2.jpg" alt="">
+            </div>
+            <div class="slider_item">
+                <img src="https://vernik03.ml/xSport/img/slider_3.png" alt="">
+            </div>
+        </div>
+        <div class="breadcrumbs">
+            <ul>
+                <li><a href="">Каталог</a></li>
+                <li><p>&nbsp;/&nbsp;</p></li>
+                <li><a href="">Взуття</a></li>
+                <li><p>&nbsp;/&nbsp;</p></li>
+                <li><a href="">Чоловіче взуття</a></li>
+                <li><p>&nbsp;/&nbsp;</p></li>
+                <li><a href="">Для бігу</a></li>                  
+            </ul>
+        </div>
+        <div class="goods_block">
+            <div class="left_column">
+                <div class="goods_list">
+                    <div class="accordion-group">
+                        <h3 class="accordion-header">Одяг</h3>    
+                        <div class="accordion-body">
+                            <div class="accordion-group accordion-group-in">
+                            <h3 class="accordion-header accordion-header-in">Чоловічий</h3>
+                                <div class="accordion-body">
+                                    <ul class="accordion-list">
+                                        <li class="accordion-list-item">Для залу</li>
+                                        <li class="accordion-list-item">Для бігу</li>
+                                        <li class="accordion-list-item">Для міста</li>
+                                        <li class="accordion-list-item">Спецалізований</li>
+                                        <li class="accordion-list-item">Туристичний</li>
+                                    </ul>
+                                </div>
+                                <h3 class="accordion-header accordion-header-in">Жіночий</h3>
+                                <div class="accordion-body">
+                                    <ul class="accordion-list">
+                                        <li class="accordion-list-item">Для залу</li>
+                                        <li class="accordion-list-item">Для бігу</li>
+                                        <li class="accordion-list-item">Для міста</li>
+                                        <li class="accordion-list-item">Спецалізований</li>
+                                        <li class="accordion-list-item">Туристичний</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="accordion-header  default-open">Взуття</h3>    
+                        <div class="accordion-body">
+                            <div class="accordion-group accordion-group-in">
+                            <h3 class="accordion-header accordion-header-in  default-open">Чоловіче</h3>
+                                <div class="accordion-body">
+                                    <ul class="accordion-list">
+                                        <li class="accordion-list-item">Для залу</li>
+                                        <li class="accordion-list-item"  style="color:var(--violet);">Для бігу</li>
+                                        <li class="accordion-list-item">Для міста</li>
+                                        <li class="accordion-list-item">Спецалізоване</li>
+                                        <li class="accordion-list-item">Туристичне</li>
+                                    </ul>
+                                </div>
+                                <h3 class="accordion-header accordion-header-in">Жіноче</h3>
+                                <div class="accordion-body">
+                                    <ul class="accordion-list">
+                                        <li class="accordion-list-item">Для залу</li>
+                                        <li class="accordion-list-item">Для бігу</li>
+                                        <li class="accordion-list-item">Для міста</li>
+                                        <li class="accordion-list-item">Спецалізоване</li>
+                                        <li class="accordion-list-item">Туристичне</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><h3 class="accordion-header">Спортивне приладдя</h3>    
+                        <div class="accordion-body">
+                            <div class="accordion-group accordion-group-in">
+                            <h3 class="accordion-header accordion-header-in">Чоловіче</h3>
+                                <div class="accordion-body">
+                                    <ul class="accordion-list">
+                                        <li class="accordion-list-item">Для залу</li>
+                                        <li class="accordion-list-item">Для бігу</li>
+                                        <li class="accordion-list-item">Для міста</li>
+                                        <li class="accordion-list-item">Спецалізоване</li>
+                                        <li class="accordion-list-item">Туристичне</li>
+                                    </ul>
+                                </div>
+                                <h3 class="accordion-header accordion-header-in">Жіноче</h3>
+                                <div class="accordion-body">
+                                    <ul class="accordion-list">
+                                        <li class="accordion-list-item">Для залу</li>
+                                        <li class="accordion-list-item">Для бігу</li>
+                                        <li class="accordion-list-item">Для міста</li>
+                                        <li class="accordion-list-item">Спецалізоване</li>
+                                        <li class="accordion-list-item">Туристичне</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><h3 class="accordion-header">Туристичне приладдя</h3>    
+                        <div class="accordion-body">
+                            <div class="accordion-group accordion-group-in">
+                            <h3 class="f20 accordion-header accordion-header-in">Чоловіче</h3>
+                                <div class="accordion-body">
+                                    <ul class="accordion-list">
+                                        <li class="accordion-list-item">Для залу</li>
+                                        <li class="accordion-list-item">Для бігу</li>
+                                        <li class="accordion-list-item">Для міста</li>
+                                        <li class="accordion-list-item">Спецалізоване</li>
+                                        <li class="accordion-list-item">Туристичне</li>
+                                    </ul>
+                                </div>
+                                <h3 class="f20 accordion-header accordion-header-in">Жіноче</h3>
+                                <div class="accordion-body">
+                                    <ul class="accordion-list">
+                                        <li class="accordion-list-item">Для залу</li>
+                                        <li class="accordion-list-item">Для бігу</li>
+                                        <li class="accordion-list-item">Для міста</li>
+                                        <li class="accordion-list-item">Спецалізоване</li>
+                                        <li class="accordion-list-item">Туристичне</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><h3 class="accordion-header">Аксесуари</h3>    
+                        <div class="accordion-body">
+                            <div class="accordion-group accordion-group-in">
+                            <h3 class="f20 accordion-header accordion-header-in">Чоловічі</h3>
+                                <div class="accordion-body">
+                                    <ul class="accordion-list">
+                                        <li class="accordion-list-item">Для залу</li>
+                                        <li class="accordion-list-item">Для бігу</li>
+                                        <li class="accordion-list-item">Для міста</li>
+                                        <li class="accordion-list-item">Спецалізовані</li>
+                                        <li class="accordion-list-item">Туристичні</li>
+                                    </ul>
+                                </div>
+                                <h3 class="f20 accordion-header accordion-header-in">Жіночі</h3>
+                                <div class="accordion-body">
+                                    <ul class="accordion-list">
+                                        <li class="accordion-list-item">Для залу</li>
+                                        <li class="accordion-list-item">Для бігу</li>
+                                        <li class="accordion-list-item">Для міста</li>
+                                        <li class="accordion-list-item">Спецалізовані</li>
+                                        <li class="accordion-list-item">Туристичні</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="price_list">
+                    <p>Прайс-лист</p>
+                    <img src="https://vernik03.ml/xSport/img/excel.svg" alt="">
+                </a>            
+            </div>
+            <div class="right_column">
+                <div class="cards">                    
+                    <div class="card">
+                        <div class="heart">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.5246 3.0522C17.7526 1.46784 15.5288 0.171543 12.9419 0.926274C11.7058 1.28332 10.6273 2.04903 9.88268 3.09829C9.13802 2.04903 8.05954 1.28332 6.82343 0.926274C4.23084 0.183066 2.01274 1.46784 1.24072 3.0522C0.157599 5.2703 0.606981 7.76494 2.57735 10.467C4.12138 12.5814 6.32796 14.7246 9.53124 17.2135C9.63247 17.2924 9.75718 17.3353 9.88556 17.3353C10.0139 17.3353 10.1386 17.2924 10.2399 17.2135C13.4374 14.7304 15.6497 12.6044 17.1938 10.467C19.1584 7.76494 19.6078 5.2703 18.5246 3.0522Z" fill="white"/>
+                            </svg></div>
+                        <img src="https://vernik03.ml/xSport/img/goods/boots/1_1.png" alt="boot" class="boot_img" id="boot_id_1">
+                        <div class="circle circle_1 col1_1_label_1" id="cir1"></div>
+                        <h1>Asics<br>
+                            Gel-Nimbus 24</h1>
+                        <p>Чоловічі надшвидкі кросівки</p>
+                        <div class="color_circles">   
+                                                         
+                            <label class="color_circles_label col1_1_label_1 card_1"><input type="radio" name="boot1" id="col1_1"></label>
+                            <label class="color_circles_label col1_2_label_1 card_1"><input type="radio" name="boot1" id="col1_2"></label>
+                            <label class="color_circles_label col1_3_label_1 card_1"><input type="radio" name="boot1" id="col1_3"></label>
+                        
+                        </div>
+                        
+                        <div class="price"><h2>207</h2><h2>$</h2></div>
+                        <div class="to_basket_button">до кошику</div>
+                         
+                    </div>
+                    <div class="card">
+                        <div class="heart">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.5246 3.0522C17.7526 1.46784 15.5288 0.171543 12.9419 0.926274C11.7058 1.28332 10.6273 2.04903 9.88268 3.09829C9.13802 2.04903 8.05954 1.28332 6.82343 0.926274C4.23084 0.183066 2.01274 1.46784 1.24072 3.0522C0.157599 5.2703 0.606981 7.76494 2.57735 10.467C4.12138 12.5814 6.32796 14.7246 9.53124 17.2135C9.63247 17.2924 9.75718 17.3353 9.88556 17.3353C10.0139 17.3353 10.1386 17.2924 10.2399 17.2135C13.4374 14.7304 15.6497 12.6044 17.1938 10.467C19.1584 7.76494 19.6078 5.2703 18.5246 3.0522Z" fill="white"/>
+                            </svg></div>
+                        <img src="https://vernik03.ml/xSport/img/goods/boots/2_1.png" alt="boot" class="boot_img" id="boot_id_2">
+                        <div class="circle circle_2 col1_1_label_2" id="cir2"></div>
+                        <h1>NIKE<br>
+                            Terra Kiger 7</h1>
+                        <p>Чоловічі надшвидкі кросівки</p>
+                        <div class="color_circles">   
+                                                         
+                            <label class="color_circles_label col1_1_label_2 card_2"><input type="radio" name="boot1" id="col1_1"></label>
+                            <label class="color_circles_label col1_2_label_2 card_2"><input type="radio" name="boot1" id="col1_2"></label>
+                            <label class="color_circles_label col1_3_label_2 card_2"><input type="radio" name="boot1" id="col1_3"></label>
+                        
+                        </div>
+                        
+                        <div class="price"><h2>195</h2><h2>$</h2></div>
+                        <div class="to_basket_button">до кошику</div>
+                        
+                    </div>
+                    <div class="card">
+                        <div class="heart">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.5246 3.0522C17.7526 1.46784 15.5288 0.171543 12.9419 0.926274C11.7058 1.28332 10.6273 2.04903 9.88268 3.09829C9.13802 2.04903 8.05954 1.28332 6.82343 0.926274C4.23084 0.183066 2.01274 1.46784 1.24072 3.0522C0.157599 5.2703 0.606981 7.76494 2.57735 10.467C4.12138 12.5814 6.32796 14.7246 9.53124 17.2135C9.63247 17.2924 9.75718 17.3353 9.88556 17.3353C10.0139 17.3353 10.1386 17.2924 10.2399 17.2135C13.4374 14.7304 15.6497 12.6044 17.1938 10.467C19.1584 7.76494 19.6078 5.2703 18.5246 3.0522Z" fill="white"/>
+                            </svg></div>
+                        <img src="https://vernik03.ml/xSport/img/goods/boots/3_1.png" alt="boot" class="boot_img" id="boot_id_3">
+                        <div class="circle circle_3 col1_1_label_3" id="cir3"></div>
+                        <h1>ECCO<br>
+                            Golf Biom H4</h1>
+                        <p>Чоловічі кросівки для тренувань</p>
+                        <div class="color_circles">   
+                                                         
+                            <label class="color_circles_label col1_1_label_3 card_3"><input type="radio" name="boot1" id="col1_1"></label>
+                            <label class="color_circles_label col1_2_label_3 card_3"><input type="radio" name="boot1" id="col1_2"></label>
+                            <label class="color_circles_label col1_3_label_3 card_3"><input type="radio" name="boot1" id="col1_3"></label>
+                        
+                        </div>
+                        
+                        <div class="price"><h2>270</h2><h2>$</h2></div>
+                        <div class="to_basket_button">до кошику</div>
+                         
+                    </div>
+                    <div class="card">
+                        <div class="heart">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.5246 3.0522C17.7526 1.46784 15.5288 0.171543 12.9419 0.926274C11.7058 1.28332 10.6273 2.04903 9.88268 3.09829C9.13802 2.04903 8.05954 1.28332 6.82343 0.926274C4.23084 0.183066 2.01274 1.46784 1.24072 3.0522C0.157599 5.2703 0.606981 7.76494 2.57735 10.467C4.12138 12.5814 6.32796 14.7246 9.53124 17.2135C9.63247 17.2924 9.75718 17.3353 9.88556 17.3353C10.0139 17.3353 10.1386 17.2924 10.2399 17.2135C13.4374 14.7304 15.6497 12.6044 17.1938 10.467C19.1584 7.76494 19.6078 5.2703 18.5246 3.0522Z" fill="white"/>
+                            </svg></div>
+                        <img src="https://vernik03.ml/xSport/img/goods/boots/4_1.png" alt="boot" class="boot_img" id="boot_id_4">
+                        <div class="circle circle_4 col1_1_label_4" id="cir4"></div>
+                        <h1>NIKE<br>
+                            Quest 4</h1>
+                        <p>Чоловічі кросівки для бігу</p>
+                        <div class="color_circles">   
+                                                         
+                            <label class="color_circles_label col1_1_label_4 card_4"><input type="radio" name="boot1" id="col1_1"></label>
+                            <label class="color_circles_label col1_2_label_4 card_4"><input type="radio" name="boot1" id="col1_2"></label>
+                            
+                        </div>
+                        
+                        <div class="price"><h2>106</h2><h2>$</h2></div>
+                        <div class="to_basket_button">до кошику</div>
+                         
+                    </div>
+                    <div class="card">
+                        <div class="heart">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.5246 3.0522C17.7526 1.46784 15.5288 0.171543 12.9419 0.926274C11.7058 1.28332 10.6273 2.04903 9.88268 3.09829C9.13802 2.04903 8.05954 1.28332 6.82343 0.926274C4.23084 0.183066 2.01274 1.46784 1.24072 3.0522C0.157599 5.2703 0.606981 7.76494 2.57735 10.467C4.12138 12.5814 6.32796 14.7246 9.53124 17.2135C9.63247 17.2924 9.75718 17.3353 9.88556 17.3353C10.0139 17.3353 10.1386 17.2924 10.2399 17.2135C13.4374 14.7304 15.6497 12.6044 17.1938 10.467C19.1584 7.76494 19.6078 5.2703 18.5246 3.0522Z" fill="white"/>
+                            </svg></div>
+                        <img src="https://vernik03.ml/xSport/img/goods/boots/5_1.png" alt="boot" class="boot_img" id="boot_id_5">
+                        <div class="circle circle_5 col1_1_label_5" id="cir5"></div>
+                        <h1>Asics<br>
+                            Patriot 12</h1>
+                        <p>Чоловічі кросівки для бігу</p>
+                        <div class="color_circles">   
+                                                         
+                            <label class="color_circles_label col1_1_label_5 card_5"><input type="radio" name="boot1" id="col1_1"></label>
+                            <label class="color_circles_label col1_2_label_5 card_5"><input type="radio" name="boot1" id="col1_2"></label>
+                            <label class="color_circles_label col1_3_label_5 card_5"><input type="radio" name="boot1" id="col1_3"></label>
+                        
+                        </div>
+                        
+                        <div class="price"><h2>69</h2><h2>$</h2></div>
+                        <div class="to_basket_button">до кошику</div>
+                        
+                    </div>
+                </div>
+                <div class="info_text">
+                    <p class="mr_p">Користь бігу доведена вже давно, і більше шанувальників здорового способу життя починає ранкові пробіжки. Важливим елементом пробіжки є кросівки. Саме від них залежить, чи не зашкодять заняття спортом вашому здоров'ю.<br>
+                        Стиль та модель кросівок допоможуть налаштуватися на тренування та зможуть багато сказати про свого власника. xSport пропонує бігові кросівки відомих світових брендів для чоловіків та жінок.</p>
+                    <p class="mr_p2">Інтернет-магазин пропонує широкий асортимент, де можна ознайомитися з детальними характеристиками взуття та купити пару залежно від умов використання.
+                        <br>
+                        Ми здійснюємо швидку доставку по Києву та у всі міста України, а також пропонуємо безкоштовну доставку клієнтам із замовленням від 2000 грн. xSport – це якість, перевірена часом, тому на всю продукцію поширюється гарантія від двох років та назавжди.</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            
+            <table class="footer_left_block">
+                <tr>
+                    <th class="footer_icon">
+                    <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.19411 16.0106C6.06298 16.0106 5.07036 15.8836 4.21624 15.6297C3.36212 15.3527 2.6465 14.9141 2.0694 14.3139C1.49229 13.7137 1.05369 12.9288 0.753592 11.9593C0.47658 10.9667 0.338074 9.7663 0.338074 8.35816C0.338074 5.72655 0.96135 3.81055 2.2079 2.61017C3.47754 1.3867 5.23195 0.774964 7.47112 0.774964C8.99469 0.774964 10.2528 1.01735 11.2454 1.50212C12.238 1.98689 12.9767 2.77176 13.4615 3.85672C13.9463 4.94168 14.1887 6.41908 14.1887 8.2889C14.1887 10.7589 13.5885 12.6634 12.3881 14.0023C11.1877 15.3412 9.45637 16.0106 7.19411 16.0106ZM7.50575 12.6518C6.8363 12.6518 6.28228 12.571 5.84368 12.4095C5.40508 12.2479 5.07036 11.8901 4.83951 11.336C4.63175 10.7589 4.52787 9.88172 4.52787 8.70442C4.52787 7.64254 4.62021 6.79997 4.80489 6.17669C5.01264 5.53033 5.27811 5.0571 5.60129 4.75701C5.92447 4.43383 6.27074 4.22607 6.64009 4.13373C7.00944 4.01831 7.36724 3.9606 7.71351 3.9606C8.05977 3.9606 8.40604 4.02985 8.7523 4.16836C9.09857 4.28378 9.2717 4.3992 9.2717 4.51462C9.2717 4.60696 9.24861 4.78009 9.20245 5.03402C9.15628 5.28794 9.11011 5.48416 9.06394 5.62267C8.90235 5.55341 8.71767 5.4957 8.50992 5.44954C8.32524 5.38028 8.11748 5.34566 7.88664 5.34566C7.63271 5.34566 7.36724 5.41491 7.09023 5.55341C6.81322 5.69192 6.58238 6.00356 6.3977 6.48833C6.23611 6.95001 6.15532 7.70025 6.15532 8.73905C6.15532 9.52391 6.21303 10.0895 6.32845 10.4357C6.44387 10.782 6.60546 11.0129 6.81322 11.1283C7.04406 11.2206 7.33262 11.2668 7.67888 11.2668C7.90972 11.2668 8.14057 11.2322 8.37141 11.1629C8.60225 11.0706 8.81001 10.9898 8.99469 10.9205C9.06394 11.059 9.12165 11.2437 9.16782 11.4745C9.21399 11.7054 9.23707 11.8554 9.23707 11.9247C9.23707 12.1094 9.0524 12.2825 8.68305 12.4441C8.33678 12.5826 7.94435 12.6518 7.50575 12.6518ZM7.12486 13.9676C8.04823 13.9676 8.87926 13.783 9.61796 13.4136C10.3567 13.0443 10.9453 12.4441 11.3839 11.613C11.8456 10.7589 12.0764 9.63933 12.0764 8.25428C12.0764 6.93847 11.9033 5.87659 11.557 5.06864C11.2108 4.26069 10.6914 3.6605 9.99885 3.26807C9.32941 2.87564 8.47529 2.67942 7.4365 2.67942C5.9591 2.67942 4.75872 3.09494 3.83535 3.92597C2.91197 4.75701 2.45029 6.2344 2.45029 8.35816C2.45029 9.78938 2.63496 10.9205 3.00431 11.7515C3.37366 12.5595 3.9046 13.1366 4.59713 13.4829C5.28966 13.8061 6.13223 13.9676 7.12486 13.9676Z" fill="#37465B"/>
+                    </svg>
+                    </th>
+                   <th  class="footer_link"> <p>2012-2021 “xSport”</p></th>
+                </tr>
+                <tr>
+                    <th class="footer_icon"><svg  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.82359 0.657959H13.7831C14.7378 0.657959 15.5141 1.43511 15.5141 2.39074V11.921C15.5141 12.8766 14.7378 13.6538 13.7831 13.6538H8.74772H6.85897H1.82359C0.868925 13.6538 0.092557 12.8766 0.092557 11.921V6.72268H0.0915565V2.39074C0.0915565 1.43511 0.867925 0.657959 1.82259 0.657959H1.82359ZM1.82359 4.12429L7.20518 8.28218C7.35505 8.39453 7.53726 8.45524 7.7245 8.45524C7.91174 8.45524 8.09394 8.39453 8.24381 8.28218L13.7831 4.12352V11.921H8.74772H6.85897H1.82359V4.12429ZM2.39902 2.39074L7.7245 6.50609L13.2067 2.39074H2.39902Z" fill="#37465B"/>
+                        </svg></th>
+                       <th  class="footer_link"><a href="mailto:vernik03@gmail.com">xsport@gmail.com</a></th> 
+                </tr>
+                <tr>
+                   <th class="footer_icon"> <svg class="footer_icon" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.08163 9.48195C7.53951 11.0228 5.75287 12.4974 5.04659 11.7913C4.03637 10.7812 3.4129 9.90076 1.18398 11.6919C-1.04396 13.4821 0.667668 14.6762 1.64672 15.6541C2.77676 16.7839 6.9891 15.7144 11.1527 11.5526C15.3154 7.38984 16.3821 3.17835 15.2511 2.04853C14.272 1.06871 13.0835 -0.641603 11.293 1.58589C9.5015 3.81338 10.3812 4.43673 11.3934 5.44772C12.0967 6.15386 10.6228 7.94014 9.08163 9.48195Z" fill="#37465B"/>
+                        </svg></th>
+                       <th  class="footer_link"><a href="tel:+380982376729" class="footer_phone">+380 (98) 23 76 729</a></th> 
+                </tr>
+            </table>
+
+            <ul class="footer_nav">
+                <li><a href="">Головна</a></li>
+                <li><div></div></li>
+                <li><a href="">Каталог</a></li>
+                <li><div></div></li>
+                <li><a href="">Даставка та оплата</a></li>
+                <li><div></div></li>
+                <li><a href="">Прайс-лист</a></li>
+                <li><div></div></li>
+                <li><a href="">Контакти</a></li>                      
+            </ul>
+
+            <a class="creator" href="http://vernik03.atwebpages.com/">websyte by vernik03</a>
+        
+        </footer>
+    </div>
+</body>
+</html>

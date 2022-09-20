@@ -1,0 +1,1721 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+img, ins, kbd, q, s, samp,
+small, strike, strong,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+
+}
+
+:root {
+    --violet: #726EFF;
+    --white: #FFFFFF;
+    --mint: #BFFFF6;
+    --dark: #212B38;
+    --light: #37465B;
+
+    --main_width: 1274px;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+  }
+
+  
+body   {
+    background-color: var(--mint);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none;   /* Chrome/Safari/Opera */
+-khtml-user-select: none;    /* Konqueror */
+-moz-user-select: none;      /* Firefox */
+-ms-user-select: none;       /* Internet Explorer/Edge */
+user-select: none;           /* Non-prefixed versi*/
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* popup */
+.popup-fade:before {
+	content: '';
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	z-index: 9997;
+}
+
+.popup-fade {
+	z-index: 9998;
+}
+
+
+.popup {
+	position: fixed;
+	top: 50%;
+    margin-top: -337px;
+	left: 50%;
+	padding: 40px;
+	width: 360px;
+	margin-left: -200px;	
+	z-index: 99999;
+	opacity: 1;	
+    visibility: hidden;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 50px rgba(71, 96, 92, 0.15);
+    border-radius: 38px;
+}
+.popup-close {
+    transition: 0.2s;
+}
+.popup-close svg{
+    filter: drop-shadow(0px 7.53125px 21.0875px rgba(29, 31, 41, 0.13));
+}
+
+.name_and_close{
+    display: flex;
+    justify-content: space-between;
+    
+   margin-bottom: 30px;
+}
+
+.popup h3 {
+    font-family: 'Yanone Kaffeesatz';
+font-style: normal;
+font-weight: 500;
+font-size: 25px;
+line-height: 21px;
+display: flex;
+align-items: center;
+text-transform: uppercase;
+
+color: var(--dark);
+
+}
+
+.popup_input{
+    height: 70px;
+    width: 100%;
+    border: 3px solid var(--light);
+    box-sizing: border-box;
+    border-radius: 84px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 19px;
+    color: var(--light);
+
+   padding-left: 35px;
+   padding-top: 3px;
+   margin-bottom: 22px;
+}
+
+.popup_input:valid {
+    border: 3px solid var(--light);
+  }
+  .popup_input::selection {
+    border: 3px solid var(--light);
+  }
+
+.popup textarea{
+    resize: vertical;
+    border-radius: 25px;
+    height: 150px;
+    padding: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.popup-close:hover {
+	transform: scale(1.05);
+}
+
+#tel{
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+}
+
+#tel::placeholder{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 19px;
+}
+.send_feedback{
+    width: 100%;
+    height: 70px;
+    background: var(--violet);
+    border: 3px solid var(--white);
+    box-sizing: border-box;
+    border-radius: 95px;
+    filter: drop-shadow(0px 10px 15px rgba(114, 110, 255, 0.4));
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.send_feedback:hover{
+    transform: scale(1.03);
+}
+.send_feedback p{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-top: 3px; /* move */
+}
+
+
+/* /popup */
+
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 100%;
+    width: var(--main_width);
+    position: relative;
+    filter: blur(0px);
+    transition: filter 0.5s;
+    transition-delay: 0.2s;
+}
+
+/* header */
+
+header {
+    display: flex;
+    width: 100%;
+    height: 166px;
+    background-color: var(--white);
+    border-radius: 0 0 50px 50px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 17.3132px 43.2831px rgba(71, 96, 92, 0.15);
+}
+
+.mobile_header {
+    display: none;
+    
+}
+
+.header_logo{
+    margin-left: 50px;
+}
+
+.feedback{
+    width: 247px;
+    height: 74px;
+    background: var(--violet);
+    border: 3px solid var(--white);
+    box-sizing: border-box;
+    border-radius: 95px;
+    filter: drop-shadow(0px 10px 15px rgba(114, 110, 255, 0.4));
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.feedback:hover{
+    transform: scale(1.03);
+}
+.feedback p{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-top: 3px; /* move */
+}
+
+.search_form{
+    width: 30%;
+    height: 74px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--violet);
+    /* box-shadow: inset 0px 0px 0px 3px var(--violet); */
+    box-sizing: border-box;
+    border-radius: 84px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 19px;
+    color: var(--violet);
+
+   padding-left: 35px;
+   padding-top: 3px;
+}
+
+.search:focus{
+    border: 3px solid var(--light);
+}
+
+.search_button{
+    /* position: absolute;
+    right: 0; */
+    margin-left: -60px;
+    margin-bottom: -3px;
+    z-index: 2;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.search::placeholder {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 19px;
+    color: var(--violet);
+}
+
+
+.log_in{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 21px;    
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--violet);
+    transition: 0.2s;
+    }
+
+    .log_in:hover{
+       margin-top: -3px;
+    }
+
+.basket{
+    width: 74px;
+    height: 74px;
+    min-width: 74px;
+    background: var(--violet);
+    border: 3px solid var(--white);
+    box-sizing: border-box;
+    border-radius: 200px;
+    box-shadow: 0px 10px 32px rgba(114, 110, 255, 0.45);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.basket:hover{
+    transform: scale(1.05);
+}
+
+.basket div{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 19px;
+    height: 19px;
+    border-radius: 200px;
+    background: #5AFFE7;
+    box-shadow: 0px 5.5px 8px rgba(0, 0, 0, 0.16);
+    
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    align-items: center;
+    text-align: right;
+    text-transform: uppercase;
+    color: var(--violet);
+    display: flex;
+    justify-content: center;   
+    
+    transition: 0.2s;
+    opacity: 0;
+}
+
+/* /header */
+
+nav{
+    width: 95%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+nav ul{
+    display: flex;
+    width: 100%;
+    height: 74px;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.menu_elem{
+    display: flex;
+    height: 74px;
+    align-items: center;
+    
+}
+
+.menu_line div{
+    height: 24px;
+    border-left: 3px solid var(--violet);
+}
+
+nav a{
+    display: block;
+    width: 100%;
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21.6415px;
+    /* line-height: 21px; */
+    text-transform: uppercase;
+    color: var(--violet);
+    text-decoration: none;
+    text-align: center;
+    line-height: 74px;
+    padding-left: 50px;
+    padding-right: 50px;
+    transition-duration: 0.1s;
+    padding-top: 5px;
+
+}
+
+.menu_elem :hover{
+    box-shadow: inset 0px 0px 0px 3px var(--violet);
+    box-sizing: border-box;
+    border-radius: 74px;
+    transform: matrix(1, 0, -0.01, 1, 0, 0);
+}
+
+.slider_banner_space{
+    
+    width: 100%;
+    border-radius: 50px;
+    min-width: 0;
+    position: relative;   
+    margin-bottom: 30px;
+   
+}
+
+.breadcrumbs{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.breadcrumbs ul{
+    display: flex;
+    list-style-type: none;
+    margin-left: 60px;
+}
+
+.breadcrumbs a{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 19px;
+    color: var(--violet);
+    text-decoration: none;
+}
+
+.breadcrumbs p{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 19px;
+    color: var(--violet);
+}
+
+
+.goods_block{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+
+/* left */
+
+.left_column{
+    display: block;
+    /* margin-right: 18px; */
+    width: 300px;
+}
+
+.goods_list{
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: var(--white);
+    margin-bottom: 18px;
+    border-radius: 40px;
+
+   
+    padding-top: 35px;
+    padding-bottom: 35px;
+    width: 300px;
+box-shadow: 0px 17.3132px 43.2831px rgba(71, 96, 92, 0.15);}
+
+.level_1{
+    display: flex;
+flex-direction: column;
+}
+
+.goods_list label{
+    margin-bottom: 25px;
+    margin-left: 60px;
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 21px;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--dark);
+    cursor: pointer;
+}
+
+.goods_list input[type=radio]{
+  
+    display: none;
+
+}
+
+#goods_list_active{
+   color: var(--violet);
+}
+
+#f2_1, #f2_2, #f2_3, #f2_4, #f2_5{
+    /* display: none; */
+}
+
+.price_list{
+    display: flex;
+    width: 100%;
+    height: 87px;
+    background-color: var(--white);
+    border-radius: 100px;
+font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 21px;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--dark);justify-content: space-evenly;align-items: center;
+box-shadow: 0px 17.3132px 43.2831px rgba(71, 96, 92, 0.15);}
+
+
+
+
+
+.accordion-group { 
+    margin:  0; 
+    margin-left: 35px;
+}
+.accordion-group-in { 
+    margin:  0; 
+}
+.accordion-body {
+    display: none;
+    padding-left: 20px;
+    padding-right: 20px;    
+    background: #FFF;
+    border-radius: 5px;
+    margin: 8px 0; 
+}
+.accordion-body > * > .accordion-body {
+    background: #FFF;
+    margin: 0;
+}
+.accordion-header {
+    margin: 8px 0;
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 21px;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--dark);
+    cursor: pointer;
+    padding: 8px 40px 8px 20px;
+    border-radius: 5px;
+    position: relative;
+}
+.accordion-header-in::before {
+    content: "";
+    position: absolute;
+    height: 135%;
+    width: 1px;
+    top: 19%;
+    left: 7px;
+    margin-top: -7px;
+    margin-left: -5px;
+    border-radius: 100px;
+    border-style: solid;
+    background-color: #212B38;
+    transform: scale(0.5, 1);
+}
+
+.accordion-list-item::before {
+    content: "";
+    position: absolute;
+    height: 140%;
+    width: 1px;
+    top: 19%;
+    left: 7px;
+    margin-top: -10px;
+    margin-left: -5px;
+    border-radius: 100px;
+    border-style: solid;
+    background-color: var(--dark);
+    color: var(--dark);
+    transform: scale(0.5, 1);
+}
+
+
+.accordion-header::after {
+    content: "+";
+    right: 16px;
+    font-family: Courier;
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: bold;
+    color: var(--white);
+    position: absolute;
+}
+.accordion-header.open {
+    color: var(--violet);
+}
+
+.accordion-header.open::before {
+    color: #212B38;
+    height: 850%;
+}
+
+
+.accordion-header.open::after {
+    content: "-";
+    color: #FFF;    
+}
+.accordion-header-in {
+    margin: 8px 0;
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 19px;
+    text-transform: lowercase;    
+    text-decoration: none;
+    color: var(--dark);
+    cursor: pointer;
+    padding: 0 40px 0 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.accordion-group li{ 
+    margin: 8px 0;
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 19px;
+    text-transform: lowercase;    
+    text-decoration: none;
+    color: var(--dark);
+    cursor: pointer;
+    padding: 0 40px 0 20px;
+    border-radius: 5px;
+    position: relative;
+    list-style-type: none;
+}
+
+
+
+
+/* /left */
+
+
+/* right */
+
+.right_column{
+    display: block;
+    /* width: calc(var(--main_width)-300px); */
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;    
+    margin-bottom: 25px;
+    /* margin-left: -18px; */
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto); */
+}
+
+
+/* card */
+
+.card {
+    display: block;
+    width: 300px;
+    height: 476px;
+    background-color: var(--white);
+    margin-left: 18px;
+    margin-bottom: 18px;
+    border-radius: 38px;
+    position: relative;
+    /* z-index: -2; */
+    box-shadow: 0px 17.3132px 43.2831px rgba(71, 96, 92, 0.15);text-decoration: none;
+    
+
+overflow: hidden;}
+
+.heart {
+    display: block;
+    margin-left: 34px;
+    margin-top: 34px;
+    width: 37px;
+    height: 37px;    
+    background: var(--violet);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 7.53125px 21.0875px rgba(29, 31, 41, 0.13);
+    cursor: pointer;
+    z-index: 20;
+    position: absolute;
+    transition: all 0.1s linear;
+}
+
+.heart:hover{
+    transform: scale(1.1);
+}
+
+#onclick_heart{
+    display: none;
+}
+/* .heart path{
+    fill: #5AFFE7;
+} */
+
+.revese_heart{
+    background:#5AFFE7 ;
+}
+
+
+.circle {
+    /* position: absolute; */
+    margin-left: 60px;
+    margin-top: -386px;
+    width: 190px;
+    height: 190px;
+    border-radius: 100%;
+     z-index: 1;
+}
+
+.boot_img{
+    /* position: absolute; */    
+    margin-top: -138px;
+    margin-left: -348px;z-index: 10;
+    transform: scale(0.3);
+    /* width: 100%; */
+    filter: drop-shadow(0px 30px 50px rgba(0, 0, 0, 0.4));
+
+}
+
+.card h1{
+    position: absolute;
+    left: 34px;
+    top: 276px; 
+    font-family: 'Do Hyeon', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 95.1%;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.card p{
+    position: absolute;
+    left: 34px;
+    top: 350px; 
+    max-width: 126px;
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 19px;
+    color: var(--light);
+    text-decoration: none;
+}
+
+.color_circles{
+    position: absolute;
+    right: 34px;
+    top: 354px; 
+    display: flex;
+}
+
+.color_circles input{
+    display: none;
+}
+
+.color_circles label{   
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: 1.50625px solid var(--white);
+    box-sizing: border-box;
+    box-shadow: 0px 7.53125px 21.0875px rgba(29, 31, 41, 0.13);
+    border-radius: 100px;
+    margin-left: 6px;  
+    
+  
+}
+
+@keyframes anim {
+    0% { outline-color: rgba(144, 110, 255, 0);}
+    100% { outline-color: rgb(144, 110, 255)}
+}
+
+@keyframes anim_out {
+    0% { outline-color: rgba(144, 110, 255);}
+    100% { outline-color: rgb(144, 110, 255, 0)}
+}
+
+
+#color_circles_active{
+   outline: 2px solid var(--violet);
+   outline-offset: 1px;
+   animation: anim 0.3s;
+}
+
+#color_circles_out{
+    animation: anim_out 0.3s;
+ }
+
+.col1_1_label_1{
+    background: linear-gradient(332.35deg, #9CDDFF 11.86%, #DBDBDB 51.48%, #FF5109 87.29%);
+  
+}
+
+.col1_2_label_1{
+    background: linear-gradient(332.35deg, #11203A 11.86%, #122333 25.16%, #FF7A00 66.8%);
+   
+}
+
+.col1_3_label_1{
+    background: linear-gradient(332.35deg, #B3DD17 11.86%, #8DCCD6 51.15%, #006EBB 87.29%);   
+}
+
+
+.col1_1_label_2{    
+    background: linear-gradient(332.35deg, #00B6FF 13.38%, #FBFFA9 56.2%, #FFC90A 87.29%);
+}
+
+.col1_2_label_2{
+    background: linear-gradient(332.35deg, #EC600B 11.86%, #5DBE71 51.09%, #175FC1 87.29%); 
+}
+
+.col1_3_label_2{
+    background: linear-gradient(338.91deg, #282A23 10.79%, #CA270C 47.17%, #E61800 88.52%);
+}
+
+.col1_1_label_3{    
+    background: linear-gradient(339.13deg, #9D9FA6 39.5%, #FFD473 65.31%, #FFB101 87.65%);}
+
+.col1_2_label_3{
+    background: linear-gradient(346.81deg, #D9D9D9 38.5%, #F49198 54.2%, #D70D1B 91.32%);
+}
+
+.col1_3_label_3{
+    background: linear-gradient(349.17deg, #A0A3AC 36.11%, #5B5C63 55.15%, #100F14 91.4%);
+}
+
+.col1_1_label_4{    
+    background: linear-gradient(333.96deg, #A28AB7 12.53%, #FF8585 51.17%, #FD5F22 87.58%);
+}
+
+.col1_2_label_4{
+    background: linear-gradient(332.35deg, #1B1B19 18.88%, #ACACAC 68.38%, #DFDFDF 87.29%);
+}
+
+.col1_1_label_5{    
+    background: linear-gradient(332.35deg, #98001B 11.86%, #FF487B 87.29%);
+}
+
+.col1_2_label_5{
+    background: linear-gradient(332.35deg, #4BCC00 16.13%, #C9FF9B 82.13%);
+}
+
+.col1_3_label_5{
+    background: linear-gradient(332.35deg, #FF782C 11.86%, #FF7B5A 87.29%);
+}
+
+
+
+.card h2{
+    
+    font-family: 'Do Hyeon';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 95.1%;
+    color: var(--violet);
+    margin-right: 10px;
+
+}
+
+.price{
+    position: absolute;
+    left: 34px;
+    top: 408px; 
+    display: flex;
+}
+
+.to_basket_button{
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.0445px;
+    line-height: 19px;
+    color: var(--white);
+   
+    width: 100px;
+    height: 37px;
+    background: var(--violet);
+    border: 1.50625px solid var(--white);
+    box-sizing: border-box;
+    box-shadow: 0px 7.53125px 24.1px rgba(114, 110, 255, 0.45);
+    border-radius: 41.4219px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 408px;
+    right: 34px;
+
+    transition: 0.1s;
+}
+
+.to_basket_button:hover{
+    transform: scale(1.05);
+}
+
+.to_basket_button_click{
+    background:  hsla(171, 100%, 68%);   
+    box-shadow: 0px 7.53125px 24.1px hsla(171, 100%, 68%, 0.45);
+}
+
+/* /card */
+
+.info_text{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.info_text p{
+    margin-right: 20px;
+    text-align: justify;
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 19px;
+    color: var(--light);
+    text-decoration: none;
+    width: 100%;
+    margin: 0;
+}
+
+.mr_p{
+    margin-right: 20px!important;
+    margin-left: 40px!important;
+}
+
+.mr_p2{
+    margin-right: 40px!important;
+}
+
+/* /right */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 197px;
+    background-color: var(--white);
+    border-radius: 50px 50px 0 0;
+    margin-top: 50px;    
+    box-shadow: 0px 17.3132px 43.2831px rgba(71, 96, 92, 0.15);
+    width: 100%;
+}
+
+footer table{
+     margin-left: 55px;
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.0445px;
+    line-height: 19px;
+    text-align: justify;
+    color: var(--light);
+    min-width: 100px;
+}
+
+footer table a, footer table p{
+
+    margin-left: 8px;
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.0445px;
+    line-height: 19px;
+    text-align: justify;
+    color: var(--light);
+    text-decoration: none;
+}
+
+
+
+.footer_phone{
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.0445px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-align: justify;
+
+}
+
+.footer_left_block{
+
+}
+
+.footer_link{
+    min-width: 150px;
+/* padding-bottom: 0px; */}
+
+.footer_icon{
+    /* margin-bottom: 5px; */
+/* margin-top: 5px; */}
+
+.footer_left_block tr{
+    height: 27px;
+display: flex;align-items: flex-start;justify-content: flex-start;}
+
+.footer_nav{
+    display: flex;
+    list-style: none;   
+    width: 100%;  
+    margin-left: 15%;
+    margin-right: 15%;   
+    justify-content: space-between;
+    
+}
+.footer_nav a{
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21.6415px;
+    line-height: 21px;
+    text-decoration: none;
+    
+    text-transform: uppercase;
+    color: var(--dark);
+    transition: 0.1s;
+}
+
+.footer_nav li{
+    transition: 0.1s;
+}
+
+.footer_nav a:hover{
+    color: var(--violet);
+}
+
+.footer_nav li:hover{
+    margin-top: -2px;
+}
+.creator{
+    margin-right: 55px;
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.0445px;
+    line-height: 19px;
+    text-align: right;
+    text-transform: lowercase;
+    text-decoration: none;
+    color: var(--light);
+    min-width: 125px;
+}
+
+.creator:hover{
+    margin-top: -3px;
+    color: var(--violet);
+}
+
+
+
+
+
+
+
+@media  (max-width: 1350px) { 
+
+    :root {
+        --main_width: 936px;
+    }
+    .footer_nav{
+        margin-left: 20px;
+        margin-right: 30px;
+    }
+    .header_logo{
+        width: 164px;
+    }
+    .feedback img{
+        display: none;
+    }
+    .feedback {
+        width: 200px;
+    }
+    .search_form{
+        width: 25%;
+    }
+    .log_in{
+        width: 100px;
+        line-height: 25px;
+    }
+    .menu_elem a{
+        padding: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 15px;
+        line-height: 40px;
+    }
+
+}
+
+@media  (max-width: 990px) {
+    
+    .slick-arrow{
+        visibility: hidden;
+    }
+    .slick-dots{
+        display: none!important;
+    }
+    :root {
+        --main_width: 615px;
+    }
+
+    footer{
+        flex-direction: row;
+        justify-content: space-around;
+        height: 180px;
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    .footer_nav{
+        display: none;
+    }
+
+    .footer_left_block{
+        margin-left: 0;
+    }
+    .creator{
+        margin: 0;
+        text-align: center;
+        margin-top: 3px;
+    }
+    .footer_link {
+        min-width: 0;
+    }
+
+    .info_text{
+        flex-direction: column;
+    }
+
+    .info_text{
+        justify-content: center;
+    }
+    .mr_p{
+        display: none;
+    }
+
+    .info_text p{
+        margin: 0!important;
+        /* margin-left: -18px!important; */
+    }
+
+    .card{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .right_column{
+        margin-left: 18px;
+    }
+
+    .desktop_nav{
+        display: none;
+    }
+
+    .desktop_header{
+        display: none;
+    }
+
+    .slider_banner_space   {
+        margin-top: 138px;
+    }
+
+    .mobile_header {
+    
+
+        display: flex;
+        height: auto; 
+    min-height: 119px;
+    width: var(--main_width);
+     background-color: var(--white);
+    border-radius: 0 0 50px 50px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    box-shadow: 0px 17.3132px 43.2831px rgba(71, 96, 92, 0.15);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    /* margin-left: -18px!important; */
+    position: fixed;
+    top: 0;
+    filter: blur(0px);
+    transition: 0.3s;
+    }
+
+    .basket{
+        width: 67px;
+        height: 67px;
+    margin: 0;min-width: 20px;}
+
+    .basket img{
+        width: 29px;
+        /* height: 100%; */
+    }
+
+    .search_form {
+        width: 70%;
+        height: 55px;
+        margin-left: 10px;
+        margin-right: 10px;
+        justify-content: space-between;
+    }
+
+    .search{
+        padding-left: 29px;
+    }
+
+    .search_button {
+        
+    margin-right: 20px;}
+
+    .feedback{
+        min-height: 60px;
+        margin-top: 32px;
+    }
+    .header_logo{
+        margin: 0;
+    margin-top: 32px;height: 62px;}
+
+    .log_in{
+        margin-top: 35px;
+    }
+    .mobile_nav{
+        height: 100%;
+        width: 85%;margin: 0;
+        margin-top: 17px;
+        margin-bottom: 19px;
+    }
+
+
+    .mobile_nav a{
+        height: 0;
+
+        padding: 0;
+        line-height: 0;
+        color: var(--dark);
+    }
+    .mobile_nav ul{
+        /* height: 100%; */
+    }
+
+    .menu_elem{
+        height: 63px;
+    }
+
+    .menu_content{
+        display: none;
+    }
+
+        
+
+    .m_menu_button{
+        transition: 0.2s;
+        min-width: 45px;
+        min-height: 45px;
+        display: flex;
+    flex-direction: column;justify-content: space-around;}
+
+    .m_menu_button rect{
+        display: block;
+        width: 45px;
+        height: 6px;
+        background-color: var(--violet);
+        border-radius: 50px;
+        /* margin-bottom: 5px; */
+        transition: 0.2s;
+        opacity: 1;
+
+    }
+
+    .m_header_panel{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 85%;
+        margin-top: 20px;
+    }
+
+    .r2_3{
+        width: 25px!important;
+        border-radius: 0px!important;
+        background-color: #FFF!important;
+        margin-left: 11px!important;
+    }
+    .r2{
+        transition: 0.2s;
+    }
+
+    .r2_2::after{
+        content: "";
+        transform: rotate(90deg);
+        
+        display: block;
+        width: 25px;
+        height: 6px;
+        background-color: #FFF;
+    }
+
+    .log_in:hover{
+        margin-top: 35px;
+     }
+
+     .menu_elem a:hover{
+        color: var(--violet);
+     }
+
+     .menu_content2{
+         display: flex;
+         
+        flex-direction: column;
+        transition: height 0.3s;
+        height: 0;
+        align-items: center;
+        width: 100%;overflow: hidden;
+     }
+
+     .mc2{
+         display: flex;
+     width: 85%;justify-content: space-between;align-items: center;}
+
+     .log_in{
+        width: auto;
+        line-height: 71px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media  (max-width: 500px) {
+
+    .log_in{
+        line-height: 20px;
+    }
+
+    .menu_content2{
+        display: none;
+    }
+
+.m_menu_button{
+    transition: 0.2s;
+    min-width: 35px;
+    min-height: 35px;
+    display: flex;
+flex-direction: column;justify-content: space-around;}
+
+.m_menu_button rect{
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: var(--violet);
+    border-radius: 50px;
+    /* margin-bottom: 5px; */
+    transition: 0.2s;
+    opacity: 1;
+
+}
+
+.m_header_panel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    margin-top: 20px;
+}
+
+
+    .mobile_header {
+    
+
+        display: flex;
+        height: auto; 
+    min-height: 89px;
+    width: 300px;
+     background-color: var(--white);
+    border-radius: 0 0 30px 30px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    box-shadow: 0px 17.3132px 43.2831px rgba(71, 96, 92, 0.15);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    /* margin-left: -18px!important; */
+    position: fixed;
+    top: 0;
+    filter: blur(0px);
+    transition: 0.3s;
+    }
+    
+    .slider_banner_space{
+        display: none!important;
+    }
+    :root {
+        --main_width: 100%;
+    }
+    .price_list{
+        display: none!important;
+    }
+
+    .goods_block {
+        flex-direction: column;
+    }
+
+    .goods_block {
+        align-items: center;
+    margin-top: 108px;}
+
+    .left_column {
+        display: block;
+    /* margin: 0; */}
+
+    .cards {
+        justify-content: center;
+    }
+
+    .card{
+        margin-left: 0;
+    }
+    .info_text{
+        justify-content: center;
+    }
+    .mr_p{
+        display: none;
+    }
+
+    .info_text p{
+        width: 300px;
+        margin: 0!important;
+        /* margin-left: -18px!important; */
+    }
+
+    .footer_nav{
+        display: none;
+    }
+
+    .right_column{
+        margin-left: 0;
+    }
+
+    .info_text{
+
+        align-items: center;
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        height: 180px;
+        width: 300px;
+        margin-top: 40px;
+        border-radius: 30px 30px 0 0;
+        /* margin-left: -18px!important; */
+    }
+
+    .footer_left_block{
+        margin-left: 0;
+    }
+    .creator{
+        margin: 0;
+        text-align: center;
+        margin-top: 3px;
+        font-size: 10pt;
+    }
+
+    .footer_link {
+        min-width: 0;
+    }
+
+
+    .breadcrumbs{
+        display: none;
+    }
+
+    .menu_line{
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+    
+    }
+
+    .desktop_nav{
+        display: none;
+    }
+
+    .desktop_header{
+        display: none;
+    }
+
+    
+
+    .basket{
+        width: 67px;
+        height: 47px;
+    margin: 0;min-width: 20px;}
+
+    .basket img{
+        width: 24px;
+        /* height: 100%; */
+    }
+
+    .search_form {
+        width: auto;
+        height: 38px;
+        margin-left: 10px;
+        margin-right: 10px;
+        justify-content: space-between;
+    }
+
+    .search{
+        padding-left: 20px;
+    }
+
+    .search_button {
+        display: none;
+    }
+
+    .feedback{
+        min-height: 60px;
+        margin-top: 32px;
+    }
+    .header_logo{
+        margin: 0;
+    margin-top: 32px;height: 62px;}
+
+    .log_in{
+        margin-top: 35px;
+    }
+    .mobile_nav{
+        height: 100%;
+        width: auto;
+        margin: 0;
+        margin-top: 19px;
+        margin-bottom: 19px;
+    }
+
+
+    .mobile_nav a{
+        height: 0;
+
+        padding: 0;
+        line-height: 0;
+        color: var(--dark);
+    }
+    .mobile_nav ul{
+        height: 100%;
+    }
+
+    .menu_elem{
+        height: 63px;
+    }
+
+    .menu_content{
+        display: flex;
+        flex-direction: column;
+        transition: height 0.3s;
+        height: 0;
+        align-items: center;
+        width: 100%;overflow: hidden;
+
+        margin-bottom: 30px;
+    }
+
+    .popup{
+        
+    /* top: auto; */width: 220px;margin-left: -150px;}
+
+    .popup_input{
+        
+    height: 55px;padding-left: 30px;}
+
+    .popup textarea{
+        height: 137px;padding-left: 30px;}
+    
+        .send_feedback{
+            height: 55px;
+        }
+
+
+        .r2{
+            transition: 0.2s;
+        }
+
+        .r2_2::after{
+            content: "";
+            transform: rotate(90deg);
+            
+            display: block;
+            width: 17px;
+            height: 4px;
+            background-color: #FFF;
+        }
+
+        .basket div{
+            
+        width: 15px;height: 15px;}
+
+        .goods_list{
+            border-radius: 30px;
+        }
+
+        .card{
+            border-radius: 30px;
+        }
+
+        .r2_3{
+            width: 17px!important;
+            border-radius: 0px!important;
+            background-color: #FFF!important;
+            margin-left: 9px!important;
+        }
+
+        .log_in:hover{
+            margin-top: 35px;
+         }
+
+         .menu_elem a:hover{
+            color: var(--violet);
+         }
+
+
+}
